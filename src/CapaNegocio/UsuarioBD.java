@@ -165,4 +165,45 @@ public class UsuarioBD {
  }
     
     
+     public DefaultTableModel buscarUsuarios(String apellidos) {
+
+        DefaultTableModel modelo = null;
+        String[] cabesera = {"CODIGO", "NOMBRES", "APELLIDOS", "DIRECCION", "CLAVE", "CELULAR", "TIPO_USUARIO", "TIENDA"};
+        String[] registros = new String[8];
+        modelo = new DefaultTableModel(null, cabesera);
+
+        sql = "SELECT uDni,uNombre,uApellidos,uDireccion,uClave,uCelular,tuNombre,tienda FROM usuario AS u "
+                
+                + "INNER JOIN tipousuario AS tp ON u.idtipousuario=tp.idtipousuario "
+                + "WHERE uApellidos LIKE  '%" +apellidos+ "%' OR uNombre LIKE '%" +apellidos+ "%'";
+
+        try {
+
+            modelo = new DefaultTableModel(null , cabesera);
+          
+            PreparedStatement pst = cn.prepareStatement(sql);
+           
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                registros[0] = rs.getString("uDni");
+                registros[1] = rs.getString("uNombre");
+                registros[2] = rs.getString("uApellidos");
+                registros[3] = rs.getString("uDireccion");
+                registros[4] = rs.getString("uClave");
+                registros[5] = rs.getString("uCelular");
+                registros[6] = rs.getString("tuNombre");
+                registros[7] = rs.getString("tienda");
+
+                modelo.addRow(registros);
+
+            }
+            return modelo;
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e, "error al reportar usuario", JOptionPane.ERROR_MESSAGE);
+            return modelo;
+        }
+
+    }
+    
 }

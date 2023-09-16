@@ -63,7 +63,7 @@ public class Menu_IU extends javax.swing.JFrame {
         jToolBar1.add(jSeparator1);
         jToolBar1.add(jSeparator2);
 
-        btnProducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/cajas.png"))); // NOI18N
+        btnProducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/cajas (1).png"))); // NOI18N
         btnProducto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         btnProducto.setFocusable(false);
         btnProducto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -72,7 +72,7 @@ public class Menu_IU extends javax.swing.JFrame {
         jToolBar1.add(jSeparator4);
         jToolBar1.add(jSeparator5);
 
-        btnCompras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/evaluacion.png"))); // NOI18N
+        btnCompras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/lista-de-verificacion.png"))); // NOI18N
         btnCompras.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         btnCompras.setFocusable(false);
         btnCompras.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -85,7 +85,7 @@ public class Menu_IU extends javax.swing.JFrame {
         jToolBar1.add(jSeparator6);
         jToolBar1.add(jSeparator7);
 
-        btnIngresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/ingresos.png"))); // NOI18N
+        btnIngresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/ingresos (1).png"))); // NOI18N
         btnIngresos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         btnIngresos.setFocusable(false);
         btnIngresos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -94,7 +94,7 @@ public class Menu_IU extends javax.swing.JFrame {
         jToolBar1.add(jSeparator8);
         jToolBar1.add(jSeparator9);
 
-        btnEgresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/disminucion.png"))); // NOI18N
+        btnEgresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/disminucion (1).png"))); // NOI18N
         btnEgresos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         btnEgresos.setFocusable(false);
         btnEgresos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -103,7 +103,7 @@ public class Menu_IU extends javax.swing.JFrame {
         jToolBar1.add(jSeparator10);
         jToolBar1.add(jSeparator11);
 
-        btnVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/caja-registradora.png"))); // NOI18N
+        btnVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/caja-registradora (1).png"))); // NOI18N
         btnVentas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         btnVentas.setFocusable(false);
         btnVentas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -112,7 +112,7 @@ public class Menu_IU extends javax.swing.JFrame {
         jToolBar1.add(jSeparator12);
         jToolBar1.add(jSeparator13);
 
-        btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/flecha.png"))); // NOI18N
+        btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/salida-de-emergencia.png"))); // NOI18N
         btnCerrar.setFocusable(false);
         btnCerrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCerrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -128,7 +128,7 @@ public class Menu_IU extends javax.swing.JFrame {
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 593, Short.MAX_VALUE)
+            .addGap(0, 581, Short.MAX_VALUE)
         );
 
         jMenuBar1.setBackground(new java.awt.Color(204, 255, 204));
@@ -185,9 +185,10 @@ public class Menu_IU extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(42, 42, 42))
         );
 
         pack();

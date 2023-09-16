@@ -26,7 +26,7 @@ public class TurnoBD {
         String[] registros = new String[5];
         modelo = new DefaultTableModel(null, titulos);
 
-        sql = "SELECT idturno,descripcion,inicio,fin ,CONCAT (uApellidos, ' ' ,uNombre) AS usuario FROM turno AS t "
+        sql = "SELECT idturno,descripcion,inicio,fin, CONCAT (uApellidos, ' ' ,uNombre) AS usuario FROM turno AS t "
                 + "INNER JOIN usuario AS u ON t.uDni=u.uDni; ";
 
         try {
@@ -42,13 +42,17 @@ public class TurnoBD {
 
                 modelo.addRow(registros);
             }
+            
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e, "ERROR AL REPORTAR TURNO", JOptionPane.ERROR_MESSAGE);
             return null;
         }
-        return modelo;
+        return  modelo;
     }
 
+    
+    
     public boolean registrarTurno(Turno t) {
         boolean respuesta = false;
 
@@ -62,7 +66,7 @@ public class TurnoBD {
             pst.setString(3, t.getFin());
             pst.setString(4, t.getuDni());
 
-            respuesta = pst.executeUpdate() == 1 ? true : false;
+            respuesta = pst.executeUpdate() ==1 ? true : false;
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e, "PROBLEMAS AL REGISTRAR TURNO BD", JOptionPane.ERROR_MESSAGE);

@@ -30,6 +30,12 @@ public class Turno_IU extends javax.swing.JInternalFrame {
 
     }
 
+    private void limpiar_tabla_formulario(){
+        DefaultTableModel tabla_temporal_turno=(DefaultTableModel)tabla_reporte_Turno.getModel();
+        tabla_temporal_turno.setRowCount(0);
+    }
+    
+    
     private void limpiar() {
 
         txtDni.setText("");
@@ -53,11 +59,6 @@ public class Turno_IU extends javax.swing.JInternalFrame {
         JOptionPane.showConfirmDialog(this, mensaje, "Abvertencia", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE);
     }
 
-    private void limpiar_tabla_formulario() {
-
-        DefaultTableModel tabla_temporal_turno = (DefaultTableModel) tabla_reporte_Turno.getModel();
-        tabla_temporal_turno.setRowCount(0);
-    }
 
     private void reporteTurno() {
 
@@ -134,11 +135,13 @@ public class Turno_IU extends javax.swing.JInternalFrame {
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/favorito.png"))); // NOI18N
         jLabel1.setText("DNI:");
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/favorito.png"))); // NOI18N
         jLabel2.setText("USUARIO:");
 
         txtUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -188,15 +191,18 @@ public class Turno_IU extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(51, 51, 51))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(12, 12, 12)
                         .addComponent(txtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(txtUsuario))
                 .addContainerGap())
@@ -205,17 +211,16 @@ public class Turno_IU extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnBuscar)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(txtDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(6, 6, 6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel2)
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -225,11 +230,13 @@ public class Turno_IU extends javax.swing.JInternalFrame {
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/favorito.png"))); // NOI18N
         jLabel3.setText("TURNO");
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/favorito.png"))); // NOI18N
         jLabel4.setText("HORA DE INICIO");
 
         txtHoraInicio.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -258,6 +265,7 @@ public class Turno_IU extends javax.swing.JInternalFrame {
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_IU/favorito.png"))); // NOI18N
         jLabel5.setText("HORA FINAL:");
 
         cmbTurno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR TURNO", "TURNO 1", "TURNO 2", "TURNO 3", "TURNO 4" }));
@@ -297,7 +305,7 @@ public class Turno_IU extends javax.swing.JInternalFrame {
                 .addComponent(cmbTurno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(btnRegistrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(btnEliminar)
                 .addContainerGap())
         );
@@ -466,7 +474,7 @@ public class Turno_IU extends javax.swing.JInternalFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
 
-        try {
+     
             if (txtDni.getText().length() > 0) {
                 if (txtHoraInicio.getText().length() > 0) {
                     if (txtHoraFinal.getText().length() > 0) {
@@ -475,11 +483,11 @@ public class Turno_IU extends javax.swing.JInternalFrame {
                             Turno oTurno = new Turno();
                             TurnoBD oTurnoBD = new TurnoBD();
 
-                            oTurno.setDescripcion(txtDni.getText().toUpperCase());
-                            oTurno.setInicio(txtHoraInicio.getText().toUpperCase());
-                            oTurno.setFin(txtHoraFinal.getText().toUpperCase());
-                            oTurno.setuDni(txtDni.getText().toUpperCase());
-
+                            oTurno.setDescripcion(cmbTurno.getSelectedItem().toString());
+                            oTurno.setInicio(txtHoraInicio.getText());
+                            oTurno.setFin(txtHoraFinal.getText());
+                            oTurno.setuDni(txtDni.getText());
+                           
                             boolean respuesta = oTurnoBD.registrarTurno(oTurno);
                             if (respuesta) {
                                 exito("SE REGISTRO CON EXITO");
@@ -510,18 +518,14 @@ public class Turno_IU extends javax.swing.JInternalFrame {
                 txtDni.requestFocus();
             }
 
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "ERROR");
-
-        }
-
+       
 
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
 
-        if (fila_seleccionada > 0) {
+        if (fila_seleccionada > -1) {
             int aviso = JOptionPane.showConfirmDialog(rootPane, "ESTAS SEGURO DE ELIMINAR A LA FILA" + fila_seleccionada);
             if (aviso == 0) {
                 TurnoBD oTurnoBD = new TurnoBD();
